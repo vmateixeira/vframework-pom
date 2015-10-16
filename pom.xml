@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.vframework</groupId>
+  <artifactId>vframework-pom</artifactId>
+  <version>${vframework-pom.version}</version>
+  <name>vframework-pom</name>
+  <packaging>pom</packaging>
+  
+  <properties>
+  	<java.version>1.7</java.version>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	
+	<!-- Maven configurations and plugins -->
+	<maven.build.timestamp.format>yyyyMMdd-HHmmss</maven.build.timestamp.format>
+	<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+  	
+  	<!-- External libraries -->
+  	<slf4j.version>1.7.12</slf4j.version>
+	<logback.version>1.1.3</logback.version>
+	<junit.version>4.12</junit.version>
+  	
+  	<!-- Internal libraries -->
+  	<vframework-pom.version>0.0.1-SNAPSHOT</vframework-pom.version>
+  	<vframework-commons.version>0.0.1-SNAPSHOT</vframework-commons.version>
+  	<vframework-core.version>0.0.1-SNAPSHOT</vframework-core.version>
+  </properties>
+  
+  <!-- Project modules -->
+  <modules>
+  	<module>../vframework-commons</module>
+  	<module>../vframework-core</module>
+  </modules>
+  
+  <!-- Global project dependencies -->
+  <dependencies>
+  	<dependency>
+  		<groupId>org.slf4j</groupId>
+  		<artifactId>slf4j-api</artifactId>
+  		<version>${slf4j.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>ch.qos.logback</groupId>
+  		<artifactId>logback-classic</artifactId>
+  		<version>${logback.version}</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>${junit.version}</version>
+  		<scope>test</scope>
+  	</dependency>
+  </dependencies>
+  
+  <!-- Global main artifact repositories -->
+  <repositories>
+  	<repository>
+  		<id>Maven Central</id>
+  		<name>Maven repository</name>
+  		<url>http://central.maven.org/maven2</url>
+  	</repository>
+  	<repository>
+  		<id>Java.net</id>
+  		<name>Java.net repository</name> 
+  		<url>https://maven.java.net/content/repositories/public</url>
+  	</repository>
+  	<repository>
+  		<id>JBoss</id>
+  		<name>JBoss repository</name>
+  		<url>https://repository.jboss.org/nexus/content/groups/public</url>
+  	</repository>
+  	<repository>
+  		<id>Spring Release</id>
+  		<name>SpringSource Enterprise Bundle Repository - SpringSource Releases</name>
+  		<url>http://repository.springsource.com/maven/bundles/release</url>
+  	</repository>
+  	<repository>
+  		<id>Spring External</id>
+  		<name>SpringSource Enterprise Bundle Repository - External Releases</name>
+  		<url>http://repository.springsource.com/maven/bundles/external</url>
+  	</repository>
+  </repositories>
+</project>
